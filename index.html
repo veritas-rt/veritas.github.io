@@ -8,17 +8,17 @@
 </head>
 <body>
     <div id="markdown-content" class="markdown-body"></div>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
     <script>
         // Markdownファイルのパス
-        const markdownFilePath = 'README.md';
+        const markdownFilePath = 'sample.md';
 
         // Markdownファイルを読み込む
         fetch(markdownFilePath)
             .then(response => response.text())
             .then(text => {
                 // MarkdownをHTMLに変換
-                document.getElementById('markdown-content').innerHTML = marked(text);
+                document.getElementById('markdown-content').innerHTML = marked.Parser(text);
             });
     </script>
 </body>
