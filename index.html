@@ -1,1 +1,25 @@
-<h1>MAIN</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.0.0/github-markdown.min.css">
+</head>
+<body>
+    <div id="markdown-content" class="markdown-body"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Markdownファイルのパス
+        const markdownFilePath = 'README.md';
+
+        // Markdownファイルを読み込む
+        fetch(markdownFilePath)
+            .then(response => response.text())
+            .then(text => {
+                // MarkdownをHTMLに変換
+                document.getElementById('markdown-content').innerHTML = marked(text);
+            });
+    </script>
+</body>
+</html>
