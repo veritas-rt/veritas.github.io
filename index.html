@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <title>Markdown Renderer</title>
+    <meta name="description" content="Markdown renderer">
 
-        <title>Markdown renderer</title>
-        <meta name="description" content="Markdown renderer">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-        <!-- bootstrap -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
-<!--        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" rel="stylesheet">-->
+    <!-- jQuery and marked.js -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/marked.min.js"></script>
 
-        <!-- js libraries -->
-        <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
-        <script type="text/javascript" src="js/marked.min.js"></script>
-<script>
-    $(document).ready(function(){
-        var target = $("#markdown_content");
+    <script>
+        $(document).ready(function(){
+            var target = $("#markdown_content");
+            var src = target.attr("src");
 
-        $.ajax({
-            url: target[0].attributes["src"].value,
-        }).done(function(data){
-            target.append(marked(data));
-        }).fail(function(data){
-            target.append("This content failed to load.");
+            if (src) {
+                $.ajax({
+                    url: src,
+                }).done(function(data){
+                    target.html(marked(data));
+                }).fail(function(){
+                    target.html("Failed to load content.");
+                });
+            } else {
+                target.html("Source not specified.");
+            }
         });
-    });
-</script>
-
-    </head>
-
-    <body>
-        <!-- Content -->
-        <div class="container">
-            <div id="markdown_content" src="./sample.md"> </div>
-        </div>
-    </body>
+    </script>
+</head>
+<body>
+    <!-- Content -->
+    <div class="container">
+        <div id="markdown_content" src="./sample.md"></div>
+    </div>
+</body>
 </html>
