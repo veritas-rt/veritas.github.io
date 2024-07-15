@@ -21,7 +21,7 @@
                 $.ajax({
                     url: src,
                 }).done(function(data){
-                    target.html(marked(data));
+                    target.html(marked.parse(data));
                 }).fail(function(){
                     target.html("Failed to load content.");
                 });
