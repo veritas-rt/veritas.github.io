@@ -13,19 +13,20 @@
         <!-- js libraries -->
         <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
         <script type="text/javascript" src="js/marked.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                var target = $("#markdown_content");
+<script>
+    $(document).ready(function(){
+        var target = $("#markdown_content");
 
-                $.ajax({
-                    url: target[0].attributes["src"].value,
-                }).success(function(data){
-                    target.append(marked(data));
-                }).error(function(data){
-                    target.append("This content failed to load.");
-                });
-            });
-        </script>
+        $.ajax({
+            url: target[0].attributes["src"].value,
+        }).done(function(data){
+            target.append(marked(data));
+        }).fail(function(data){
+            target.append("This content failed to load.");
+        });
+    });
+</script>
+
     </head>
 
     <body>
