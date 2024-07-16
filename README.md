@@ -26,11 +26,6 @@ marked.jsを使用することで、Markdown形式をそのまま表示させ、
 
 ---
 
-### VERITASの取得資格<BR>
-CISSP<BR>
-OSCP<BR>
-OSEP<BR>
-OSWE<BR>
 
 
 
