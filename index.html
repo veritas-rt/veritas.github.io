@@ -8,6 +8,28 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+
     <!-- jQuery and marked.js -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/marked.min.js"></script>
@@ -32,6 +54,12 @@
     </script>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <img src="path/to/your/image.png" alt="Header Image">
+        <h1>Markdown Renderer</h1>
+    </header>
+
     <!-- Content -->
     <div class="container">
         <div id="markdown_content" src="./README.md"></div>
