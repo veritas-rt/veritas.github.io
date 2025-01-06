@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veriveritas Profile</title>
+    <style>
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(120deg, #000428, #004e92);
+            color: #00ff99;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .profile {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ff99;
+            border-radius: 15px;
+            padding: 20px;
+            width: 60%;
+            box-shadow: 0 0 20px #00ff99;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            border: 2px solid #00ff99;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .profile-header p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #66ffcc;
+        }
+
+        .profile-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-links ul li {
+            margin: 5px 0;
+        }
+
+        .profile-links ul li a {
+            text-decoration: none;
+            color: #00ff99;
+            transition: color 0.3s;
+        }
+
+        .profile-links ul li a:hover {
+            color: #66ffcc;
+        }
+
+        .profile-section {
+            margin-top: 20px;
+        }
+
+        .profile-section h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #00ff99;
+            padding-bottom: 5px;
+        }
+
+        .profile-section p, .profile-section ul {
+            margin: 10px 0;
+        }
+
+        .profile-section ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <div class="profile-header">
+            <img src="./pic/icon.png" alt="Profile Picture">
+            <div>
+                <h1>veriveritas</h1>
+                <p>Cyver Mo</p>
+            </div>
+        </div>
+
+        <div class="profile-links profile-section">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://github.com/veritas-rt">GitHub</a></li>
+            </ul>
+        </div>
+
+        <div class="profile-section">
+            <h2>Information</h2>
+            <p><strong>CTF-Team:</strong> sknb</p>
+            <p><strong>Likes:</strong>RedTeam, Malware Development, Vulnerability Research</p>
+        </div>
+
+        <div class="profile-section">
+            <h2>Contact</h2>
+            <p><strong>E-mail:</strong>kikko2enoki@gmail.com</p>
+        </div>
+   
+
+        <div class="profile-section">
+            <h2>Qualification</h2>
+            <ul>
+                <li>OffSec Certified Expert 3 (OSCE3)</li>
+                <li>OffSec Experienced Pentester (OSEP)</li>
+                <li>OffSec Web Expert (OSWE)</li>
+                <li>OffSec Exploit Developer (OSED)</li>
+                <li>OffSec Certified Professional (OSCP)</li>
+                <li>CISSP (認定申請中)</li>
+                <li>情報処理安全確保支援士（試験合格）</li>
+                <li>エンベデッドシステムスペシャリスト</li>
+                <li>基本情報技術者試験</li>
+                <li>ITパスポート</li>
+                <li>K>FiveFour - Red Team Journeyman Course (RTJC)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
